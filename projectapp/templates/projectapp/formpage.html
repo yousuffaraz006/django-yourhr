@@ -1,0 +1,35 @@
+{% extends 'projectapp/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<br>
+<br>
+<div class="container">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-10 col-md-8 col-lg-6">
+                <div class="form-group">
+                    <label for="id_name" class="mb-1"><b>Full Name :</b></label>
+                    <input type="text" id="id_name" class="form-control mb-3" name="full_name" value="{{ applicant.full_name }}">
+                    <label for="id_phone" class="mb-1"><b>Phone No :</b></label>
+                    <input type="text" id="id_phone" class="form-control mb-3" name="phone" maxlength="10" value="{{ applicant.phone }}">
+                    <label for="id_image" class="mb-1"><b>Upload your Profile Image :</b></label>
+                    <input type="file" name="image" id="id_image" class="form-control">
+                    <label for="id_resume" class="mb-1 mt-3"><b>Upload your Resume File :</b></label>
+                    <input type="file" name="resume" id="id_resume" class="form-control">
+                    {% if messages %}
+                    {% for message in messages %}
+                    <div class="rounded-1 alert alert-info my-2">{{ message }}</div>
+                    {% endfor %}
+                    {% endif %}
+                    <button type="submit" class="form-control btn btn-success mt-2">Upload</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}

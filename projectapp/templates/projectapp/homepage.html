@@ -1,0 +1,35 @@
+{% extends 'projectapp/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th style="min-width: 80px;" scope="col">#</th>
+                        <th style="min-width: 150px;" scope="col">Name</th>
+                        <th style="min-width: 130px;" scope="col">Phone</th>
+                        <th style="min-width: 150px;" scope="col">Email</th>
+                        <th style="min-width: 130px;" scope="col">Resume</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for applicant in applicants %}
+                    <tr>
+                        <th style="white-space: normal;" class="">{{ forloop.counter }}</th>
+                        <td style="white-space: normal;" class="">{{ applicant.full_name }}</td>
+                        <td style="white-space: normal;" class="">{{ applicant.phone }}</td>
+                        <td style="white-space: normal;" class="">{{ applicant.user.email }}</td>
+                        <td style="white-space: normal;" class="">{% if applicant.resume %}<a href="{{ applicant.resume.url }}" target="_blank">Resume</a>{% else %} <small>No Resume</small>{% endif %}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

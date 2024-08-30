@@ -1,0 +1,46 @@
+YourHR Application Documentation
+
+Overview
+
+YourHR is a web-based application designed to manage user registration, login, and profile management for a human resources system. The application provides a secure and user-friendly interface for users to sign up, log in, and access their profiles.
+
+Features
+
+User Registration: Users can register for an account by providing their email address, first name, last name, and password. The application sends a verification email to the user's email address, which must be verified before the account is activated.
+Email Verification: The application sends a unique verification token to the user's email address, which must be clicked to activate the account.
+Login: Registered users can log in to their accounts using their username and password.
+Profile Management: Users can access and update their profile information, including their full name and email address.
+Role-Based Access Control: The application supports role-based access control, where users can be assigned to different groups (e.g., "User" or "Admin") with varying levels of access to the system.
+Admin Dashboard: Administrators can access a dashboard to view and manage all registered users.
+
+Technical Details
+
+The application is built using Django, a Python-based web framework. It utilizes the following technologies:
+
+Django Authentication: The application uses Django's built-in authentication system to manage user registration, login, and password management.
+Email Verification: The application uses Django's email system to send verification emails to users.
+Role-Based Access Control: The application uses Django's built-in permission system to manage role-based access control.
+Database: The application uses a relational database (e.g., MySQL) to store user data.
+
+Functionality
+
+The application consists of the following views:
+
+Send Mail: This view sends a verification email to the user's email address.
+Verify: This view verifies the user's email address and activates their account.
+Sign Up: This view allows users to register for an account.
+Login: This view allows registered users to log in to their accounts.
+Home: This view displays the admin dashboard for administrators.
+Form: This view allows users to access and update their profile information.
+
+Security
+
+The application takes the following security measures:
+
+Password Hashing: Passwords are hashed and stored securely in the database.
+Email Verification: Email verification ensures that users provide a valid email address.
+Role-Based Access Control: Role-based access control ensures that users only have access to authorized areas of the system.
+
+Conclusion
+
+YourHR is a secure and user-friendly web application designed to manage user registration, login, and profile management for a human resources system. Its features and technical details make it an ideal solution for organizations seeking to manage user data and access control.
