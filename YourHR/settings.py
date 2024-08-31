@@ -155,8 +155,8 @@ LOGIN_REDIRECT_URL = 'formpage'
 LOGOUT_URL = 'logout'
 LOGOUT_REDIRECT_URL = 'login'
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '323592912405-t330digb4a6m3p4tb1kuir4678l125kb.apps.googleusercontent.com'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = ''
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = ''
 
 #  FOR GOOGLE SIGN IN  #
 
@@ -164,5 +164,5 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'yisuonline@gmail.com'
-EMAIL_HOST_PASSWORD = 'nprejmtqxzsszggj'
+EMAIL_HOST_USER = '@gmail.com'
+EMAIL_HOST_PASSWORD = ''
